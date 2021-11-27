@@ -1,0 +1,15 @@
+<section>
+  <h1>Tarefas</h1>
+  <br />
+
+  <label> Tarefas: </label>
+  <input type="text" [(ngModel)]="input" />
+  <button (click)="isabelaTarefas.addTarefas(input)">+</button>
+  <br />
+  <ul>
+    <li *ngFor="let task of isabelaTarefas.getTarefas()">
+      {{ task.name }}
+      <button (click)="isabelaTarefas.removerTarefas(task.id)">-</button>
+    </li>
+  </ul>
+</section>
